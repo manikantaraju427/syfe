@@ -96,7 +96,6 @@ Check the eksctl version
 eksctl version
 
 
-
 AWS cli Installation on EC2
 
 First we need to install zip utility for unzip aws cli file.
