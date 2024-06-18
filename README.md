@@ -36,6 +36,7 @@ Configure the instance details, storage, tags, and security group. Ensure the se
 Use SSH to connect to each instance:
 
 ssh -i my-key.pem ubuntu@my-ec2-instance-public-IP
+
 ![Screenshot (453)](https://github.com/manikantaraju427/syfe/assets/125948783/2041fd33-a4e8-4f62-b4bf-7c69c47182ab)
 
 # Installing Kubernetes:-
@@ -43,6 +44,7 @@ ssh -i my-key.pem ubuntu@my-ec2-instance-public-IP
 Update the Package Index:
 
 sudo apt update
+
 ![Screenshot (455)](https://github.com/manikantaraju427/syfe/assets/125948783/580b6dfc-144f-4bfd-b37b-b104ee7e9308)
 
 Install Docker:
@@ -52,9 +54,11 @@ sudo apt install -y docker.io
 sudo systemctl enable docker
 
 sudo systemctl start docker
+
 ![Screenshot (456)](https://github.com/manikantaraju427/syfe/assets/125948783/7bccb47c-1cb9-44bb-865d-d132cf3f7216)
 
 Check the status of docker with $systemctl status docker
+
 ![Screenshot (457)](https://github.com/manikantaraju427/syfe/assets/125948783/1fd56e3d-4d94-4abb-a376-59e9efc9f573)
 
 Kubectl Installation on EC2
@@ -74,6 +78,7 @@ sudo mv ./kubectl /usr/local/bin
 Check the kubectl client version
 
 kubectl version - short - client
+
 ![Screenshot (458)](https://github.com/manikantaraju427/syfe/assets/125948783/397d8107-2c23-44a9-8389-a8425f523e61)
 
 EKSctl Installation on EC2
@@ -81,9 +86,20 @@ EKSctl Installation on EC2
 Using curl command to download eksctl
 
 curl - silent - location"https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+
 Next move our kubectl into bin directory for access eksctl from anywhere.
 
 sudo mv /tmp/eksctl /usr/local/bin
+
 Check the eksctl version
 
 eksctl version
+
+
+
+AWS cli Installation on EC2
+
+First we need to install zip utility for unzip aws cli file.
+
+sudo apt install zip
+
